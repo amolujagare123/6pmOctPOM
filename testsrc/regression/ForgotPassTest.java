@@ -11,6 +11,7 @@ import util.DoLogin;
 
 public class ForgotPassTest extends DoLogin  {
 
+
     @Test
     public void forgotPassTest()
     {
