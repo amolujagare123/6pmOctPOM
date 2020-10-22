@@ -1,29 +1,22 @@
 package util;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
+import pages.Login;
 
 import java.io.IOException;
 
-import static util.ConfigReader.getUrl;
-import static util.Driver.*;
+import static util.ConfigReader.getPassword;
+import static util.ConfigReader.getUsername;
 
-public class DoLogin {
-
-    public WebDriver driver;
+public class DoLogin extends  OpenUrl{
 
     @BeforeClass
-    public void openUrl() throws IOException {
-        WebDriverManager.chromedriver().setup();
+    public void doLogin()throws IOException
+    {
+        Login login = new Login(driver);
 
-        /*driver = new ChromeDriver();
-        driver.manage().window().maximize();*/
-
-        driver = getWebDriver(DriverType.FIREFOX);
-
-        driver.get(getUrl());
+        login.setTxtUser(getUsername());
+        login.setTxtPass(getPassword());
+        login.clickLogin();
     }
-
 }

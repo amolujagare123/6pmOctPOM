@@ -1,15 +1,11 @@
 package regression;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.ForgotPassword;
 import pages.Login;
-import util.DoLogin;
+import util.OpenUrl;
 
-public class ForgotPassTest extends DoLogin  {
+public class ForgotPassTest extends OpenUrl {
 
 
     @Test
