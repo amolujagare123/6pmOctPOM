@@ -1,0 +1,14 @@
+<suite name="Demo project">
+
+    <listeners>
+        <listener class-name="util.MyListners"/>
+    </listeners>
+
+
+    <test name="module1">
+        <classes>
+            <class name="regression.Clients.AddClientTest"/>
+        </classes>
+    </test>
+
+</suite>
